@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainProcesses.AnaActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        tools:context=".MainProcesses.AnaActivity">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+
+            android:id="@+id/main_nav"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:backgroundTint="@color/colorPrimary"
+            app:itemIconTint="@color/colorPrimary"
+            app:itemTextColor="@color/colorPrimary"
+            app:menu="@menu/nev_items">
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+        <FrameLayout
+
+            android:id="@+id/main_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/main_nav"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="44dp"></FrameLayout>
+
+        <TextView
+            android:id="@+id/textViewKalanPara"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="TextView"
+            android:textSize="25dp" />
+
+    </RelativeLayout>
+
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_left_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:menu="@menu/nav_left"
+            android:layout_gravity = "start"
+            android:layout_weight="4">
+
+        </com.google.android.material.navigation.NavigationView>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

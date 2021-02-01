@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_graph">
+
+    <fragment
+        android:id="@+id/usdTryFragment"
+        android:name="com.example.gradiotionproject.MainProcesses.UsdTryFragment"
+        android:label="fragment_usd_try"
+        tools:layout="@layout/fragment_usd_try" >
+        <action
+            android:id="@+id/action_usdTryFragment_to_euroTryFragment2"
+            app:destination="@id/euroTryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/euroTryFragment"
+        android:name="com.example.gradiotionproject.MainProcesses.DovizFragment"
+        android:label="fragment_euro_try"
+        tools:layout="@layout/fragment_doviz" >
+        <action
+            android:id="@+id/action_euroTryFragment_to_altinTryFragment"
+            app:destination="@id/altinTryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/altinTryFragment"
+        android:name="com.example.gradiotionproject.MainProcesses.AltinTryFragment"
+        android:label="fragment_altin_try"
+        tools:layout="@layout/fragment_altin_try" >
+        <action
+            android:id="@+id/action_altinTryFragment_to_borsaFragment2"
+            app:destination="@id/borsaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/borsaFragment"
+        android:name="com.example.gradiotionproject.MainProcesses.BorsaFragment"
+        android:label="fragment_borsa"
+        tools:layout="@layout/fragment_borsa" >
+        <action
+            android:id="@+id/action_borsaFragment_to_usdTryFragment"
+            app:destination="@id/usdTryFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainProcesses.SelectBorsaActivity">
+
+    <TextView
+        android:id="@+id/kalanPara"
+        android:layout_width="231dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/linearBorsaChart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+    <LinearLayout
+        android:id="@+id/linearBorsaChart"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kalanPara">
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/borsaLineChart"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:layout_constraintTop_toTopOf="@+id/kalanPara">
+
+        </com.github.mikephil.charting.charts.LineChart>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewBorsaHacimTl"
+        android:layout_width="400dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBorsaHacimLot"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textViewBorsaSon"
+        android:layout_width="400dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.363"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBorsaAl" />
+
+    <TextView
+        android:id="@+id/textViewBorsaDun"
+        android:layout_width="400dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.363"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBorsaSon" />
+
+    <TextView
+        android:id="@+id/textViewBorsaAdi"
+        android:layout_width="112dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="12dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/textViewBorsaSon"
+        app:layout_constraintEnd_toStartOf="@+id/btnBorsaSat"
+        app:layout_constraintHorizontal_bias="0.437"
+        app:layout_constraintStart_toEndOf="@+id/btnBorsaAl" />
+
+    <TextView
+        android:id="@+id/textViewBorsaDusuk"
+        android:layout_width="400dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBorsaYuksek" />
+
+    <TextView
+        android:id="@+id/textViewBorsaYuksek"
+        android:layout_width="400dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBorsaYuzde" />
+
+    <TextView
+        android:id="@+id/textViewBorsaYuzde"
+        android:layout_width="400dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.363"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBorsaDun" />
+
+    <Button
+        android:id="@+id/btnBorsaAl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@android:color/holo_green_light"
+        android:onClick="borsaAlisYap"
+        android:text="AL"
+        app:layout_constraintEnd_toStartOf="@+id/btnBorsaSat"
+        app:layout_constraintHorizontal_bias="0.246"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearBorsaChart" />
+
+    <Button
+        android:id="@+id/btnBorsaSat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="12dp"
+        android:background="@android:color/holo_red_light"
+        android:hint="@string/selling"
+        android:onClick="borsaSatisYap"
+        android:text="SAT"
+        app:layout_constraintBottom_toTopOf="@+id/textViewBorsaSon"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewBorsaHacimLot"
+        android:layout_width="400dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.363"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBorsaDusuk" />
+
+    <ImageView
+        android:id="@+id/imageViewBorsaGeri"
+        android:onClick="BackToSelectBorsa"
+        android:layout_width="44dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/kalanPara"
+        app:layout_constraintHorizontal_bias="0.131"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_back"
+        app:tint="@color/colorPrimary" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

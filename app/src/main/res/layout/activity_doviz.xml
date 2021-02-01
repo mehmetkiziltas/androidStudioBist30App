@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainProcesses.SelectDovizActivity">
+
+
+    <TextView
+        android:id="@+id/textViewDovizAd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toStartOf="@+id/textViewDovizSatis"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toEndOf="@+id/textViewDovizAlis"
+        app:layout_constraintTop_toBottomOf="@+id/linearBorsaChart" />
+
+
+    <LinearLayout
+        android:id="@+id/linearBorsaChart"
+        android:layout_width="404dp"
+        android:layout_height="376dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewDovizGeri">
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/borsaLineChart"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewDovizGeri">
+
+            <ProgressBar
+                android:id="@+id/progressBarUsd"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:indeterminate="true"
+                android:visibility="gone">
+
+            </ProgressBar>
+        </com.github.mikephil.charting.charts.LineChart>
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnUsdBuy"
+        android:layout_width="133dp"
+        android:layout_height="60dp"
+        android:layout_gravity="left"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="160dp"
+        android:background="@color/colorPrimary"
+        android:text="Al"
+        android:onClick="Buyying"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/btnUsdSell"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearBorsaChart" />
+
+    <Button
+        android:id="@+id/btnUsdSell"
+        android:layout_width="133dp"
+        android:layout_height="60dp"
+        android:layout_gravity="right"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="32dp"
+        android:background="@color/colorPrimary"
+        android:onClick="Selling"
+        android:text="@string/selling"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnUsdBuy"
+        app:layout_constraintTop_toBottomOf="@+id/linearBorsaChart" />
+
+    <TextView
+        android:id="@+id/textViewDovizAlis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="68dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/btnUsdBuy"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewDovizDurum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toStartOf="@+id/textViewDovizSatis"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toEndOf="@+id/textViewDovizAlis"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDovizAd" />
+
+    <TextView
+        android:id="@+id/textViewDovizSatis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="68dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/btnUsdSell"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewDovizGeri"
+        android:layout_width="56dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="4dp"
+        android:onClick="BackToSelectDoviz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.011"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_back"
+        app:tint="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/dovizKalanPara"
+        android:layout_width="164dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="4dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/linearBorsaChart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintStart_toEndOf="@+id/imageViewDovizGeri"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

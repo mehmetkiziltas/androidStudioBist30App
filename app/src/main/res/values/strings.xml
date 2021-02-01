@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">GradiotionProject</string>
+    <string name="title_activity_ana_islem">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_all">All Users</string>
+    <string name="title_logout">Log Out</string>
+    <string name="nav_home">DÖVİZ</string>
+    <string name="nav_name">Settings</string>
+    <string name="nav_hesaplar">All money</string>
+    <string name="nav_altin">BORSA</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nav_left_button" />
+    <string name="selling">SAT</string>
+    <string name="Account">Account</string>
+    <string name="LogOut">Log Out</string>
+    <string name="new_name">New Name</string>
+    <string name="changeName">Change Name</string>
+    <string name="OyunuSifirla">New Game</string>
+    <string-array name="numbersAccount">
+        <item>All</item>
+        <item>Day</item>
+        <item>Week</item>
+        <item>Month</item>
+        <item>Year</item>
+    </string-array>
+    <string-array name="numbersAllUsers">
+        <item>All</item>
+        <item>Day</item>
+        <item>Week</item>
+        <item>Month</item>
+        <item>Year</item>
+    </string-array>
+    <string-array name="numbersYapilanHesaplamalar">
+        <item>All</item>
+        <item>Day</item>
+        <item>Week</item>
+        <item>Month</item>
+        <item>Year</item>
+    </string-array>
+    <string name="title_activity_all_money">AllMoneyActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+</resources>

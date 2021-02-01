@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.gradiotionproject">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Design.Light.NoActionBar">
+        <activity android:name=".MainProcesses.AllMoneyActivity"></activity>
+        <activity android:name=".MainProcesses.SettingsActivity" />
+        <activity android:name=".MainProcesses.AccountActivity" />
+        <activity android:name=".MainProcesses.AllUsersActivity" />
+        <activity android:name=".MainProcesses.SelectBorsaActivity" />
+        <activity android:name=".MainProcesses.SelectDovizActivity" />
+        <activity android:name=".LoginProcesse.ForgetPasswordActivity" />
+        <activity android:name=".MainProcesses.AnaActivity" />
+        <activity android:name=".LoginProcesse.SingUpActivity" />
+        <activity android:name=".LoginProcesse.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
